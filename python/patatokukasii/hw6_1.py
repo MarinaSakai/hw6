@@ -18,6 +18,31 @@ class MainHandler(BaseHandler):
     def get(self):
         self.render("hw6_1.html")
 
+class SubHandler(BaseHandler):
+    def get(self):
+        self.render("hw6_1_result.html")
+        word1 = self.request.get("word1");
+        word2 = self.request.get("word2");
+        word1_list = list(word1);
+        word2_list = list(word2);
+        result = ""
+
+        if len(word1_list) > len(word2_list):
+            longer = len(word1_list)
+            shorter = len(word2_list)
+            longword = word1_list
+        else:
+            longer = len(word2_list)
+            shorter = len(word1_list)
+            longword = len(word2_list)
+
+        for index in range(shorter):
+            result += word1_list[index] + word2_list[index])
+
+        for index in range(shorter, longer):
+            result += longword[index]
+
+        self.response.out.write(result)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
