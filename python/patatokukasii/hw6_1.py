@@ -23,10 +23,10 @@ class MainHandler(BaseHandler):
 class SubHandler(BaseHandler):
     def get(self):
         self.render("hw6_1_result.html")
-        word1 = cgi.escape(self.request.get("word1"));
-        word2 = cgi.escape(self.request.get("word2"));
-        word1_list = list(word1);
-        word2_list = list(word2);
+        word1 = cgi.escape(self.request.get("word1"))
+        word2 = cgi.escape(self.request.get("word2"))
+        word1_list = list(word1)
+        word2_list = list(word2)
         result = ""
 
         if len(word1_list) > len(word2_list):
