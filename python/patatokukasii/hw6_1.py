@@ -36,7 +36,7 @@ class SubHandler(BaseHandler):
         else:
             longer = len(word2_list)
             shorter = len(word1_list)
-            longword = len(word2_list)
+            longword = word2_list
 
         for index in range(shorter):
             result +=(word1_list[index] + word2_list[index])
