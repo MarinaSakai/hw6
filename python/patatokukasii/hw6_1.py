@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-print "Content-type: text/html\n"
-
 import webapp2
 import os
 import jinja2
@@ -25,8 +23,8 @@ class MainHandler(BaseHandler):
 class SubHandler(BaseHandler):
     def get(self):
         self.render("hw6_1_result.html")
-        word1 = self.request.get("word1");
-        word2 = self.request.get("word2");
+        word1 = cgi.escape(self.request.get("word1"));
+        word2 = cgi.escape(self.request.get("word2"));
         word1_list = list(word1);
         word2_list = list(word2);
         result = ""
