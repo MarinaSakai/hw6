@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-# -*- coding: utf-8\n\n -*-
+# -*- coding: utf-8 -*-
+
+print "Content-type: text/html\n"
 
 import webapp2
 import os
