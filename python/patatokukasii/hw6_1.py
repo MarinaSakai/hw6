@@ -39,7 +39,7 @@ class SubHandler(BaseHandler):
             longword = word2_list
 
         for index in range(shorter):
-            result +=(word1_list[index] + word2_list[index])
+            result += (word1_list[index] + word2_list[index])
 
         for index in range(shorter, longer):
             result += longword[index]
