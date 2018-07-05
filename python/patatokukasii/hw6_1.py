@@ -46,4 +46,5 @@ class SubHandler(BaseHandler):
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
+    ('/sub' SubHandler)
 ], debug=True)
